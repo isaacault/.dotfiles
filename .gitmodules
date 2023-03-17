@@ -1,0 +1,9 @@
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "zsh/external/powerlevel10k"]
+	path = zsh/external/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh/external/zsh-completions"]
+	path = zsh/external/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
