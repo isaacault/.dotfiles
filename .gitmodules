@@ -7,3 +7,9 @@
 [submodule "zsh/external/zsh-completions"]
 	path = zsh/external/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "polybar/polybar-windows"]
+	path = polybar/polybar-windows
+	url = https://github.com/aroma1994/polybar-windows.git
+[submodule "polybar/submodules/polybar-windows"]
+	path = polybar/submodules/polybar-windows
+	url = https://github.com/aroma1994/polybar-windows.git

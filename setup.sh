@@ -14,5 +14,6 @@ ln -s $FLAG $DOTFILES_ROOT/zsh $HOME/.zsh
 ln -s $FLAG $DOTFILES_ROOT/zsh/zshrc $HOME/.zshrc
 ln -s $FLAG $DOTFILES_ROOT/zsh/p10k.zsh $HOME/.p10k.zsh
 ln -s $FLAG $DOTFILES_ROOT/i3 $XDG_CONFIG_HOME/i3
+ln -s $FLAG $DOTFILES_ROOT/polybar $XDG_CONFIG_HOME/polybar
 ln -s $FLAG $DOTFILES_ROOT/nvim $XDG_CONFIG_HOME/nvim
 ln -s $FLAG $DOTFILES_ROOT/tmux/tmux.conf $HOME/.tmux.conf
