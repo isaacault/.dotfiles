@@ -84,5 +84,5 @@ alias vimdiff='nvim -d'
 alias vim='nvim'
 alias vi='nvim'
 
-# Make CapsLock useful
-setxkbmap -option ctrl:swapcaps
+# # Make CapsLock useful
+# setxkbmap -option ctrl:swapcaps
