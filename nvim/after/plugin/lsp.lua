@@ -1,13 +1,18 @@
 local lsp = require("lsp-zero")
+local preview = require('goto-preview')
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   'rust_analyzer',
+  'lua_ls',
+  'clangd',
+  'opencl_ls',
+  'cmake',
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
@@ -37,7 +42,7 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_preferences({
-    suggest_lsp_servers = false,
+--    suggest_lsp_servers = false,
     sign_icons = {
         error = 'E',
         warn = 'W',
@@ -49,7 +54,8 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  -- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+  vim.keymap.set("n", "gd", function() preview.goto_preview_definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)

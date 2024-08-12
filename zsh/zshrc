@@ -73,6 +73,14 @@ zstyle -e ':completion:*:*:urls' urls 'reply=( ${${(f)"$(egrep --only-matching \
 # End Completion stuff
 ###############################################################################
 
+# function chpwd() {
+#   if [ -r $PWD/.zsh_config ]; then
+#     source $PWD/.zsh_config
+#   else
+#     source $HOME/.zshrc
+#   fi
+# }
+
 export XDG_CONFIG_HOME=$HOME/.config
 
 # CUDA PATH

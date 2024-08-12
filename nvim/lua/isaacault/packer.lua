@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
 
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
+  use('nvim-treesitter/nvim-treesitter-context')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -61,6 +62,19 @@ return require('packer').startup(function(use)
         require('Comment').setup()
     end
   }
+  use("sbdchd/neoformat")
+  use({"ellisonleao/glow.nvim", config = function() require("glow").setup() end})
+  use {
+    'marioortizmanero/adoc-pdf-live.nvim',
+    config = "require('adoc_pdf_live').setup()"
+  }
+  use {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup {}
+    end
+  }
+
 
 end)
 

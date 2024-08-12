@@ -209,3 +209,6 @@ bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'm
 # Move workspace to different monitor
 bindsym $mod+m move workspace to output up
 bindsym $mod+n move workspace to output left
+
+exec xrandr --output DP-2 --mode 1920x1200
+exec xrandr --output DP-1-8 --right-of DP-2 --auto
