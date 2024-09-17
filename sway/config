@@ -242,8 +242,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 
-# output eDP-1 resolution 1920x1080 position 0,0
+output eDP-1 resolution 1920x1080 position 0,0
 # output DP-1 resolution 1920x1080 position 0,-1080
+# output DP-3 resolution 2560x1440 position -320,-1440
 
 set $laptop eDP-1
 bindswitch lid:on output $laptop disable
@@ -294,3 +295,4 @@ bindsym $mod+Print mode "$screenshot"
 exec /usr/bin/lxpolkit
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
