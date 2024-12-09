@@ -1,15 +1,9 @@
-[submodule "tmux/plugins/tpm"]
-	path = tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm.git
-[submodule "zsh/external/powerlevel10k"]
-	path = zsh/external/powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git
-[submodule "zsh/external/zsh-completions"]
-	path = zsh/external/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions.git
-[submodule "polybar/polybar-windows"]
-	path = polybar/polybar-windows
-	url = https://github.com/aroma1994/polybar-windows.git
-[submodule "polybar/submodules/polybar-windows"]
-	path = polybar/submodules/polybar-windows
-	url = https://github.com/aroma1994/polybar-windows.git
+[submodule "zsh"]
+	path = zsh
+	url = git@github.com:isaacault/zsh.git
+[submodule "tmux"]
+	path = tmux
+	url = git@github.com:isaacault/tmux.git
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:isaacault/nvim.git
