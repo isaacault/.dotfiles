@@ -26,7 +26,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #
 # Default wallpaper (more resolutions are available in /usr/local/share/backgrounds/sway/)
 # output * bg /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/isaac/Pictures/backgrounds/firewatch/MwUb9E5.jpeg fill
+# output * bg /home/isaac/Pictures/backgrounds/firewatch/MwUb9E5.jpeg fill
+output * bg /home/isaac/.dotfiles/sway/wallpapers/blob-scene-haikei.svg fill
 #
 # Example configuration:
 #
@@ -240,6 +241,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# bindsym XF86AudioRaiseVolume output $laptop toggle
+bindsym XF86Eject output $laptop toggle
 
 
 output eDP-1 resolution 1920x1080 position 0,0
@@ -292,7 +295,13 @@ mode "$screenshot" {
 bindsym $mod+Print mode "$screenshot"
 
 # Start policy kit auth agent
-exec /usr/bin/lxpolkit
+#exec /usr/bin/lxpolkit
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+
+# Notification Daemon
+exec swaync
+
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw
