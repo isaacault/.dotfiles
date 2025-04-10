@@ -7,8 +7,7 @@
 }
 
 window#waybar {
-    /* background: transparent; */
-    background: shade(alpha(@borders, 0.75), 1.25);
+    background: alpha(#1F1F1F, 0.95);
     color: white;
 }
 
@@ -16,11 +15,6 @@ window#waybar {
     font-weight: bold;
     font-family: "Ubuntu";
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
     padding: 0 5px;

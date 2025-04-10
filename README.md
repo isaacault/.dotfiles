@@ -5,7 +5,7 @@ My dotfile configurations.
 Required packages: (not a complete list)
 
 ```
-sudo apt install i3 fonts-powerline zsh
+sudo apt install zsh fzf sway dmenu ripgrep
 ```
 
 Clone with `--recurse-submodules` and run `setup.sh`
